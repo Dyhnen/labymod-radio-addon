@@ -1,0 +1,4 @@
+JLayer 1.0.1 (javazoom:jlayer:1.0.1)
+MP3 decoder/player/converter by JavaZoom.
+License declared by the artifact POM: GNU Lesser General Public License (LGPL).
+https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html

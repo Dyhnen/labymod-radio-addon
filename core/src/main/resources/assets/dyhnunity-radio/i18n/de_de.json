@@ -1,0 +1,148 @@
+{
+  "dyhnunity-radio": {
+    "settings": {
+      "enabled": { "name": "Aktiviert", "description": "Aktiviert Player, Hotkey, Hauptmenü-Button und HUD-Widget." },
+      "openRadio": { "name": "Radio-Player öffnen", "description": "Öffnet den vollständigen Radio-Player sofort.", "button": "Player öffnen" },
+      "openRadioKey": { "name": "Radio-Hotkey", "description": "Öffnet das Radio im Hauptmenü und im Spiel." },
+      "volume": { "name": "Lautstärke", "description": "Legt die Wiedergabelautstärke fest." },
+      "rememberLastStation": { "name": "Letzten Sender merken", "description": "Speichert den zuletzt ausgewählten Sender." },
+      "autoPlayLastStation": { "name": "Letzten Sender automatisch starten", "description": "Startet den gespeicherten Sender beim Laden des Addons." },
+      "playerCardPosition": {
+        "name": "Now-Playing-Card am Spielernamen",
+        "description": "Zeigt Cover, Titel und Interpret gemeinsam als eine Card an deinem eigenen Spielernamen.",
+        "entries": { "none": "Aus", "aboveName": "Über dem Spielernamen", "belowName": "Unter dem Spielernamen" }
+      },
+      "playerCardScale": { "name": "Größe der Now-Playing-Card", "description": "Skaliert die komplette Card inklusive Cover und Text gemeinsam." },
+      "widgetEnabled": { "name": "Widget aktiviert", "description": "Blendet das Radio-HUD im Spiel ein oder aus." },
+      "widgetShowStation": { "name": "Sender anzeigen" },
+      "widgetShowTitle": { "name": "Titel anzeigen" },
+      "widgetShowArtist": { "name": "Interpret anzeigen" },
+      "widgetShowVolume": { "name": "Lautstärke anzeigen" },
+      "presenceEnabled": { "name": "Now Playing über LabyConnect teilen", "description": "Teilt Sender, Titel, Interpret, Cover und Status mit anderen Addon-Nutzern. Stream-URLs und Einstellungen werden nicht übertragen." },
+      "presencePrivacy": {
+        "name": "Sichtbarkeit über LabyConnect",
+        "description": "Legt fest, wer deine Now-Playing-Card sehen darf und wessen Cards du empfängst.",
+        "entries": {
+          "nobody": "Niemand (Freigabe aus)",
+          "friends": "Nur LabyConnect-Freunde",
+          "otherUsers": "Spieler in deiner Umgebung"
+        }
+      },
+      "website": { "name": "Minecraft-Server", "description": "Öffnet die Website von Dyhntastic.net.", "button": "Dyhntastic.net öffnen" },
+      "header": {
+        "radio": { "name": "Radio" },
+        "playerName": { "name": "Anzeige am Spielernamen" },
+        "widget": { "name": "Widget" },
+        "presence": { "name": "LabyConnect-Freigabe" },
+        "dyhntastic": { "name": "Dyhntastic" }
+      }
+    },
+    "ui": {
+      "title": "DYHNUNITY RADIO PLAYER",
+      "mainMenuButton": "Dyhnunity Radio Player",
+      "pauseMenuButton": "Radio-Player",
+      "startupPending": "Der Dyhnunity Radio Player wird noch gestartet.",
+      "navigation": { "favorites": "Favoriten", "discovery": "Entdecken", "custom": "Eigene Sender" },
+      "controls": {
+        "play": "Abspielen",
+        "pause": "Pause",
+        "resume": "Fortsetzen",
+        "reconnect": "Neu verbinden",
+        "favorite": "Favorit",
+        "favoriteSaved": "Favorit gespeichert",
+        "volume": "LAUTSTÄRKE  %s%%"
+      },
+      "sections": {
+        "favorites": { "title": "DEINE FAVORITEN", "subtitle": "Gespeichert und sofort abspielbar" },
+        "discovery": { "title": "NEUE SENDER ENTDECKEN", "subtitle": "Katalog wählen und anschließend direkt darin suchen" },
+        "preview": { "title": "LIVE-SENDER", "subtitle": "Sender mit aktuellem Interpret und Titel" },
+        "custom": { "title": "EIGENEN SENDER HINZUFÜGEN", "subtitle": "Direkte HTTP(S)-MP3-Streams" }
+      },
+      "empty": {
+        "favorites": "Keine Favoriten gespeichert.",
+        "results": "Noch keine Sender geladen.",
+        "noStations": "Keine Sender gefunden.",
+        "custom": "Noch keine eigenen Sender gespeichert."
+      },
+      "search": { "placeholder": "Sendernamen durchsuchen …" },
+      "custom": {
+        "namePlaceholder": "Name",
+        "streamPlaceholder": "Stream-URL (HTTP/HTTPS)",
+        "save": "Sender speichern"
+      },
+      "openWebsite": "DyhnunityFM.de öffnen",
+      "hero": {
+        "info": "Addon von DyhnenTv  ·  Besuche den Minecraft-Server Dyhntastic.net",
+        "readyTitle": "Bereit für deinen Sound",
+        "readyArtist": "Wähle unten einen Sender aus",
+        "noStation": "Kein Sender ausgewählt"
+      },
+      "browser": {
+        "activeCatalog": "Aktiver Katalog: %s",
+        "searching": "Suche in %s läuft …",
+        "searchUnavailable": "%s-Suche ist derzeit nicht erreichbar.",
+        "noMatches": "Keine passenden Sender in %s gefunden.",
+        "loading": "%s wird geladen …",
+        "unavailable": "%s ist derzeit nicht erreichbar.",
+        "loaded": "%s Sender aus %s geladen",
+        "connecting": "Verbinde mit %s …"
+      },
+      "metadata": {
+        "unknownArtist": "Interpret unbekannt",
+        "loadingTitle": "Titel wird geladen …",
+        "checking": "Stream-Metadaten werden geprüft …",
+        "unavailableTitle": "Keine Live-Titelinformation verfügbar",
+        "unsupportedFormat": "Nicht unterstützt  ·  %s"
+      },
+      "provider": { "custom": "Eigener Sender" },
+      "state": {
+        "loading": "VERBINDE …",
+        "playing": "LIVE",
+        "paused": "PAUSIERT",
+        "stopped": "BEREIT",
+        "error": "FEHLER",
+        "errorWithMessage": "FEHLER  ·  %s"
+      },
+      "validation": {
+        "nameRequired": "Ein Sendername ist erforderlich.",
+        "nameTooLong": "Der Sendername darf höchstens 80 Zeichen lang sein.",
+        "invalidStreamUrl": "Die Stream-URL muss mit HTTP oder HTTPS beginnen.",
+        "streamUrlTooLong": "Die Stream-URL darf höchstens 2048 Zeichen lang sein.",
+        "unsupportedStreamFormat": "Das Streamformat %s wird von diesem MP3-Player nicht unterstützt.",
+        "unknown": "Die Eingabe ist ungültig."
+      },
+      "errors": {
+        "unsupportedFormat": "Streamformat %s wird nicht unterstützt",
+        "invalidStreamUrl": "Die Stream-URL ist ungültig",
+        "playbackFailed": "Der Stream konnte nicht verbunden oder dekodiert werden",
+        "unknown": "Der Stream konnte nicht wiedergegeben werden"
+      },
+      "notifications": {
+        "favoriteAdded": { "title": "Favorit gespeichert", "text": "%s wurde zu deinen Favoriten hinzugefügt." },
+        "favoriteRemoved": { "title": "Favorit entfernt", "text": "%s wurde aus deinen Favoriten entfernt." },
+        "stationStarting": { "title": "Sender wird gestartet", "text": "Verbinde mit %s." },
+        "playbackPaused": { "title": "Wiedergabe pausiert", "text": "%s wurde pausiert." },
+        "playbackResumed": { "title": "Wiedergabe fortgesetzt", "text": "%s wird weiter abgespielt." },
+        "playbackError": { "title": "Wiedergabe nicht möglich", "text": "%s." },
+        "stationDeleted": { "title": "Sender gelöscht", "text": "%s wurde entfernt." },
+        "stationSaved": { "title": "Sender gespeichert", "text": "%s ist sofort abspielbar." },
+        "stationSaveFailed": { "title": "Sender konnte nicht gespeichert werden" },
+        "stationEdit": { "title": "Sender bearbeiten", "text": "Name und Stream-URL von %s wurden geladen." },
+        "noStation": { "title": "Kein Sender ausgewählt", "text": "Wähle zuerst einen Sender aus." },
+        "reconnecting": { "title": "Stream wird neu verbunden", "text": "Die Verbindung zu %s wird vollständig neu aufgebaut." }
+      }
+    },
+    "hudWidget": {
+      "radio": {
+        "name": "Dyhnunity Radio Player",
+        "description": "Zeigt Sender, aktuellen Titel, Interpret und Lautstärke an.",
+        "labels": {
+          "station": "Sender",
+          "title": "Titel",
+          "artist": "Interpret",
+          "volume": "Lautstärke"
+        }
+      }
+    }
+  }
+}

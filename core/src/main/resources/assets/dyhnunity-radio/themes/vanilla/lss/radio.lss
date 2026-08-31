@@ -1,0 +1,496 @@
+.radio-scroll {
+  left: 50%;
+  alignment-x: center;
+  top: 34;
+  bottom: 6;
+  width: 90%;
+  max-width: 620;
+  padding-right: 4;
+  scroll-speed: 48;
+  modify-content-width: false;
+}
+
+.radio-content {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 10;
+  space-between-entries: 6;
+}
+
+.radio-hero {
+  width: 100%;
+  height: 88;
+  renderer: Background;
+  background-color: rgba(10, 7, 22, 238);
+  border-color: rgba(211, 30, 135, 185);
+  border-thickness: 1;
+  border-radius: 8;
+  stencil: true;
+}
+
+.brand-logo {
+  left: 10;
+  top: 10;
+  width: 68;
+  height: 68;
+  border-radius: 6;
+}
+
+.brand-info {
+  left: 90;
+  right: 10;
+  top: 10;
+  height: 9;
+  text-color: #ff3e9d;
+  font-size: 0.62;
+  font-weight: 500;
+  max-lines: 1;
+}
+
+.song-title {
+  left: 89;
+  right: 10;
+  top: 24;
+  height: 15;
+  text-color: white;
+  font-size: 1.18;
+  font-weight: 500;
+  max-lines: 1;
+}
+
+.song-artist {
+  left: 90;
+  right: 10;
+  top: 43;
+  height: 10;
+  text-color: rgba(226, 215, 241, 225);
+  font-size: 0.82;
+  max-lines: 1;
+}
+
+.station-name {
+  left: 90;
+  right: 10;
+  top: 58;
+  height: 10;
+  text-color: #c47bff;
+  font-size: 0.79;
+  max-lines: 1;
+}
+
+.player-status {
+  left: 90;
+  top: 72;
+  width: fit-content;
+  height: 12;
+  padding-left: 5;
+  padding-right: 5;
+  renderer: Background;
+  background-color: rgba(226, 24, 128, 72);
+  border-color: rgba(255, 69, 164, 170);
+  border-thickness: 0.7;
+  border-radius: 6;
+  text-color: #ff70b6;
+  font-size: 0.66;
+  font-weight: 500;
+}
+
+.controls, .discovery {
+  width: 100%;
+  height: 25;
+  layout: fill;
+  space-between-entries: 5;
+}
+
+.primary-control {
+  background-color: rgba(207, 22, 125, 210);
+  border-color: rgba(255, 101, 181, 220);
+  border-thickness: 1;
+  font-weight: 500;
+}
+
+.primary-control:selected {
+  background-color: rgba(76, 31, 116, 235);
+  border-color: rgba(188, 125, 255, 235);
+  text-color: #f1ddff;
+}
+
+.control-button {
+  background-color: rgba(31, 23, 48, 225);
+  border-color: rgba(150, 108, 183, 120);
+  border-thickness: 0.8;
+}
+
+.volume {
+  width: 100%;
+  height: 21;
+}
+
+.page-navigation {
+  width: 100%;
+  height: 25;
+  layout: fill;
+  space-between-entries: 5;
+  margin-top: 2;
+}
+
+.page-tab {
+  height: 25;
+  background-color: rgba(25, 18, 42, 225);
+  border-color: rgba(139, 95, 174, 120);
+  border-thickness: 0.8;
+  font-weight: 500;
+  background-color-transition-duration: 150;
+}
+
+.page-tab:hover {
+  background-color: rgba(57, 28, 68, 235);
+  border-color: rgba(239, 76, 164, 195);
+}
+
+.page-tab:selected {
+  background-color: rgba(181, 20, 108, 225);
+  border-color: rgba(255, 99, 183, 235);
+  text-color: white;
+}
+
+.radio-page {
+  width: 100%;
+  height: fit-content;
+  space-between-entries: 6;
+}
+
+.section-heading {
+  width: 100%;
+  height: 27;
+  margin-top: 4;
+  border-color: rgba(196, 123, 255, 100);
+  border-bottom-thickness: 1;
+}
+
+.section-title {
+  left: 2;
+  top: 1;
+  right: 2;
+  height: 11;
+  text-color: #f25aa8;
+  font-size: 0.84;
+  font-weight: 500;
+  max-lines: 1;
+}
+
+.section-subtitle {
+  left: 2;
+  right: 2;
+  top: 14;
+  height: 10;
+  text-color: rgba(205, 190, 218, 190);
+  font-size: 0.69;
+  max-lines: 1;
+}
+
+.station-host {
+  width: 100%;
+  height: fit-content;
+}
+
+.empty-stations {
+  width: 100%;
+  height: 18;
+  padding-left: 5;
+  text-color: rgba(211, 194, 224, 205);
+  font-size: 0.72;
+}
+
+.station-grid {
+  width: 100%;
+  height: fit-content;
+  tile-height: 70;
+  space-between-entries: 5;
+  margin-top: 1;
+  margin-bottom: 2;
+}
+
+.station-card {
+  height: 70;
+  use-floating-point-position: true;
+  renderer: Background;
+  background-color: rgba(20, 15, 34, 224);
+  border-color: rgba(167, 91, 211, 100);
+  border-thickness: 0.8;
+  border-radius: 6;
+  stencil: true;
+  background-color-transition-duration: 140;
+}
+
+.station-card:hover {
+  background-color: rgba(42, 23, 58, 238);
+  border-color: rgba(244, 67, 160, 205);
+}
+
+.station-source-lautfm {
+  background-color: rgba(45, 23, 29, 228);
+  border-color: rgba(238, 105, 47, 155);
+}
+
+.station-source-lautfm:hover {
+  background-color: rgba(65, 30, 31, 242);
+  border-color: rgba(255, 143, 75, 225);
+}
+
+.station-source-radio-browser {
+  background-color: rgba(17, 43, 48, 228);
+  border-color: rgba(44, 203, 193, 165);
+}
+
+.station-source-radio-browser:hover {
+  background-color: rgba(22, 61, 65, 242);
+  border-color: rgba(91, 239, 225, 225);
+}
+
+.station-source-ilove {
+  background-color: rgba(53, 17, 42, 228);
+  border-color: rgba(248, 71, 169, 170);
+}
+
+.station-source-ilove:hover {
+  background-color: rgba(77, 23, 58, 242);
+  border-color: rgba(255, 122, 196, 230);
+}
+
+.station-source-radioreg {
+  background-color: rgba(17, 28, 54, 228);
+  border-color: rgba(74, 132, 238, 165);
+}
+
+.station-source-radioreg:hover {
+  background-color: rgba(24, 42, 78, 242);
+  border-color: rgba(117, 171, 255, 225);
+}
+
+.station-source-custom {
+  background-color: rgba(34, 20, 49, 228);
+  border-color: rgba(183, 91, 228, 165);
+}
+
+.station-source-custom:hover {
+  background-color: rgba(50, 28, 70, 242);
+  border-color: rgba(222, 133, 255, 225);
+}
+
+.station-logo {
+  left: 6;
+  top: 8;
+  width: 48;
+  height: 48;
+  border-radius: 5;
+}
+
+.station-play {
+  left: 76;
+  right: 29;
+  top: 10;
+  height: 13;
+  alignment: left;
+  font-size: 0.86;
+  font-weight: 600;
+  max-lines: 1;
+  text-color: white;
+}
+
+.station-card-play {
+  left: 61;
+  top: 10;
+  width: 11;
+  height: 11;
+}
+
+.station-subtitle {
+  left: 64;
+  right: 29;
+  top: 39;
+  height: 10;
+  text-color: rgba(217, 202, 228, 210);
+  font-size: 0.69;
+  max-lines: 1;
+}
+
+.station-favorite, .station-edit, .station-delete {
+  right: 5;
+  width: 19;
+  height: 19;
+  background-color: rgba(82, 39, 91, 210);
+  border-color: rgba(245, 91, 172, 160);
+  border-thickness: 0.7;
+}
+
+.station-favorite {
+  bottom: 4;
+  text-color: #ff73b8;
+}
+
+.station-favorite:selected, .control-button:selected {
+  background-color: rgba(126, 84, 18, 235);
+  border-color: rgba(255, 207, 71, 235);
+  text-color: #ffd451;
+}
+
+.station-edit {
+  bottom: 4;
+  right: 29;
+}
+
+.station-delete {
+  right: 53;
+  bottom: 4;
+}
+
+.provider-lautfm, .provider-radio-browser, .provider-ilove, .provider-radioreg {
+  height: 25;
+  font-weight: 500;
+  border-thickness: 1;
+}
+
+.provider-lautfm {
+  background-color: rgba(236, 82, 39, 205);
+  border-color: rgba(255, 155, 92, 225);
+}
+
+.provider-radio-browser {
+  background-color: rgba(21, 129, 130, 210);
+  border-color: rgba(84, 225, 216, 225);
+}
+
+.provider-ilove {
+  background-color: rgba(204, 29, 121, 210);
+  border-color: rgba(255, 105, 183, 225);
+}
+
+.provider-radioreg {
+  background-color: rgba(52, 83, 173, 210);
+  border-color: rgba(111, 155, 255, 220);
+}
+
+.browser-status {
+  width: 100%;
+  height: 19;
+  padding-left: 7;
+  padding-top: 5;
+  renderer: Background;
+  background-color: rgba(22, 17, 38, 205);
+  border-color: rgba(138, 101, 173, 95);
+  border-thickness: 0.7;
+  border-radius: 4;
+  text-color: rgba(228, 216, 238, 220);
+  font-size: 0.74;
+}
+
+.search, .custom-name, .custom-stream {
+  width: 100%;
+  height: 22;
+}
+
+.empty-result, .empty-custom {
+  width: 100%;
+  height: 20;
+  text-color: rgba(216, 199, 229, 190);
+  font-size: 0.75;
+}
+
+.save-custom {
+  width: 100%;
+  height: 25;
+  background-color: rgba(91, 45, 121, 220);
+  border-color: rgba(205, 111, 255, 170);
+  border-thickness: 0.8;
+  font-weight: 500;
+}
+
+.branding {
+  width: 100%;
+  height: 24;
+  margin-top: 4;
+  background-color: rgba(178, 16, 104, 180);
+  border-color: rgba(255, 76, 170, 180);
+  border-thickness: 0.8;
+  text-color: white;
+  font-weight: 500;
+}
+
+.error {
+  left: 50%;
+  alignment-x: center;
+  top: 75;
+  text-color: red;
+}
+
+@media(max-width: 520) {
+  .radio-scroll {
+    width: 96%;
+  }
+
+  .radio-hero {
+    height: 78;
+  }
+
+  .brand-logo {
+    left: 8;
+    top: 8;
+    width: 62;
+    height: 62;
+  }
+
+  .brand-info, .song-title, .song-artist, .station-name, .player-status {
+    left: 80;
+  }
+
+  .brand-info {
+    font-size: 0.55;
+    top: 8;
+  }
+
+  .song-title {
+    top: 20;
+    font-size: 1;
+  }
+
+  .song-artist {
+    top: 37;
+  }
+
+  .station-name {
+    top: 51;
+  }
+
+  .player-status {
+    top: 64;
+    height: 11;
+  }
+
+  .controls {
+    height: 24;
+  }
+}
+
+@media(max-width: 360) {
+  .radio-scroll {
+    width: 98%;
+  }
+
+  .brand-logo {
+    width: 54;
+    height: 54;
+    top: 12;
+  }
+
+  .brand-info, .song-title, .song-artist, .station-name, .player-status {
+    left: 70;
+  }
+
+  .station-play {
+    font-size: 0.72;
+  }
+
+}

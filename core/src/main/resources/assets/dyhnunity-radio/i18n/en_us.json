@@ -1,0 +1,148 @@
+{
+  "dyhnunity-radio": {
+    "settings": {
+      "enabled": { "name": "Enabled", "description": "Enables the player, hotkey, main-menu button, and HUD widget." },
+      "openRadio": { "name": "Open radio player", "description": "Opens the complete radio player immediately.", "button": "Open player" },
+      "openRadioKey": { "name": "Radio hotkey", "description": "Opens the radio from both the main menu and in-game." },
+      "volume": { "name": "Volume", "description": "Sets the playback volume." },
+      "rememberLastStation": { "name": "Remember last station", "description": "Stores the most recently selected station." },
+      "autoPlayLastStation": { "name": "Auto-play last station", "description": "Starts the stored station when the addon loads." },
+      "playerCardPosition": {
+        "name": "Now-playing card at player name",
+        "description": "Shows cover, title, and artist together as one card at your own player name.",
+        "entries": { "none": "Off", "aboveName": "Above player name", "belowName": "Below player name" }
+      },
+      "playerCardScale": { "name": "Now-playing card size", "description": "Scales the complete card including its cover and text." },
+      "widgetEnabled": { "name": "Widget enabled", "description": "Shows or hides the radio HUD in-game." },
+      "widgetShowStation": { "name": "Show station" },
+      "widgetShowTitle": { "name": "Show title" },
+      "widgetShowArtist": { "name": "Show artist" },
+      "widgetShowVolume": { "name": "Show volume" },
+      "presenceEnabled": { "name": "Share Now Playing via LabyConnect", "description": "Shares station, title, artist, cover, and status with other addon users. Stream URLs and settings are never transmitted." },
+      "presencePrivacy": {
+        "name": "LabyConnect visibility",
+        "description": "Controls who may see your Now Playing card and whose cards you receive.",
+        "entries": {
+          "nobody": "Nobody (sharing off)",
+          "friends": "LabyConnect friends only",
+          "otherUsers": "Nearby players"
+        }
+      },
+      "website": { "name": "Minecraft server", "description": "Opens the Dyhntastic.net website.", "button": "Open Dyhntastic.net" },
+      "header": {
+        "radio": { "name": "Radio" },
+        "playerName": { "name": "Player name display" },
+        "widget": { "name": "Widget" },
+        "presence": { "name": "LabyConnect sharing" },
+        "dyhntastic": { "name": "Dyhntastic" }
+      }
+    },
+    "ui": {
+      "title": "DYHNUNITY RADIO PLAYER",
+      "mainMenuButton": "Dyhnunity Radio Player",
+      "pauseMenuButton": "Radio player",
+      "startupPending": "The Dyhnunity Radio Player is still starting.",
+      "navigation": { "favorites": "Favorites", "discovery": "Discover", "custom": "Custom stations" },
+      "controls": {
+        "play": "Play",
+        "pause": "Pause",
+        "resume": "Resume",
+        "reconnect": "Reconnect",
+        "favorite": "Favorite",
+        "favoriteSaved": "Favorite saved",
+        "volume": "VOLUME  %s%%"
+      },
+      "sections": {
+        "favorites": { "title": "YOUR FAVORITES", "subtitle": "Saved and ready to play" },
+        "discovery": { "title": "DISCOVER NEW STATIONS", "subtitle": "Choose a catalog, then search it instantly" },
+        "preview": { "title": "LIVE STATIONS", "subtitle": "Stations with current artist and title" },
+        "custom": { "title": "ADD YOUR OWN STATION", "subtitle": "Direct HTTP(S) MP3 streams" }
+      },
+      "empty": {
+        "favorites": "No favorites saved.",
+        "results": "No stations loaded yet.",
+        "noStations": "No stations found.",
+        "custom": "No custom stations saved yet."
+      },
+      "search": { "placeholder": "Search station names …" },
+      "custom": {
+        "namePlaceholder": "Name",
+        "streamPlaceholder": "Stream URL (HTTP/HTTPS)",
+        "save": "Save station"
+      },
+      "openWebsite": "Open DyhnunityFM.de",
+      "hero": {
+        "info": "Addon by DyhnenTv  ·  Visit the Minecraft server Dyhntastic.net",
+        "readyTitle": "Ready for your sound",
+        "readyArtist": "Choose a station below",
+        "noStation": "No station selected"
+      },
+      "browser": {
+        "activeCatalog": "Active catalog: %s",
+        "searching": "Searching %s …",
+        "searchUnavailable": "%s search is currently unavailable.",
+        "noMatches": "No matching stations found on %s.",
+        "loading": "Loading %s …",
+        "unavailable": "%s is currently unavailable.",
+        "loaded": "Loaded %s stations from %s",
+        "connecting": "Connecting to %s …"
+      },
+      "metadata": {
+        "unknownArtist": "Unknown artist",
+        "loadingTitle": "Loading title …",
+        "checking": "Checking stream metadata …",
+        "unavailableTitle": "No live title information available",
+        "unsupportedFormat": "Not supported  ·  %s"
+      },
+      "provider": { "custom": "Custom station" },
+      "state": {
+        "loading": "CONNECTING …",
+        "playing": "LIVE",
+        "paused": "PAUSED",
+        "stopped": "READY",
+        "error": "ERROR",
+        "errorWithMessage": "ERROR  ·  %s"
+      },
+      "validation": {
+        "nameRequired": "A station name is required.",
+        "nameTooLong": "The station name must not exceed 80 characters.",
+        "invalidStreamUrl": "The stream URL must start with HTTP or HTTPS.",
+        "streamUrlTooLong": "The stream URL must not exceed 2048 characters.",
+        "unsupportedStreamFormat": "Stream format %s is not supported by this MP3 player.",
+        "unknown": "The input is invalid."
+      },
+      "errors": {
+        "unsupportedFormat": "Stream format %s is not supported",
+        "invalidStreamUrl": "The stream URL is invalid",
+        "playbackFailed": "The stream could not be connected or decoded",
+        "unknown": "The stream could not be played"
+      },
+      "notifications": {
+        "favoriteAdded": { "title": "Favorite saved", "text": "%s was added to your favorites." },
+        "favoriteRemoved": { "title": "Favorite removed", "text": "%s was removed from your favorites." },
+        "stationStarting": { "title": "Starting station", "text": "Connecting to %s." },
+        "playbackPaused": { "title": "Playback paused", "text": "%s was paused." },
+        "playbackResumed": { "title": "Playback resumed", "text": "%s is playing again." },
+        "playbackError": { "title": "Playback unavailable", "text": "%s." },
+        "stationDeleted": { "title": "Station deleted", "text": "%s was deleted." },
+        "stationSaved": { "title": "Station saved", "text": "%s is ready to play." },
+        "stationSaveFailed": { "title": "Station could not be saved" },
+        "stationEdit": { "title": "Edit station", "text": "Loaded the name and stream URL for %s." },
+        "noStation": { "title": "No station selected", "text": "Choose a station first." },
+        "reconnecting": { "title": "Reconnecting stream", "text": "The connection to %s is being rebuilt." }
+      }
+    },
+    "hudWidget": {
+      "radio": {
+        "name": "Dyhnunity Radio Player",
+        "description": "Shows the station, current title, artist, and volume.",
+        "labels": {
+          "station": "Station",
+          "title": "Title",
+          "artist": "Artist",
+          "volume": "Volume"
+        }
+      }
+    }
+  }
+}
