@@ -18,6 +18,10 @@ public record RadioMetadata(
     nextArtist = normalize(nextArtist);
   }
 
+  public boolean hasNowPlaying() {
+    return !this.title.isBlank() || !this.artist.isBlank();
+  }
+
   private static String normalize(String value) {
     return value == null ? "" : value;
   }

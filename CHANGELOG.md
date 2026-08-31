@@ -2,6 +2,17 @@
 
 Alle relevanten Änderungen am Dyhnunity Radio Player werden in dieser Datei dokumentiert.
 
+## 1.0.8 – 2026-08-31
+
+### Behoben
+
+- Leere oder vorübergehend fehlgeschlagene I-LOVE-MUSIC-Metadatenabrufe überschreiben nicht mehr
+  den zuletzt gültigen Titel und Interpreten mit Platzhaltern.
+- Der I-LOVE-MUSIC-Metadatencache verwendet bei einem leeren ICY-Block weiterhin den letzten
+  gültigen Song, bis der Stream wieder verwertbare Live-Metadaten liefert.
+- Favoriten, Senderkarten, HUD und Now-Playing-Anzeige behalten bei kurzen Metadatenaussetzern
+  konsistente Titel- und Artist-Daten.
+
 ## 1.0.7 – 2026-08-31
 
 ### Review-Bereitschaft

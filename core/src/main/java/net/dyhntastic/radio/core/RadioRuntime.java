@@ -233,7 +233,10 @@ public final class RadioRuntime implements AutoCloseable {
     }
     return this.provider(station.source()).metadata(station).handle((metadata, error) -> {
       this.metadataCheckedStations.add(station.id());
-      return error == null ? station.withMetadata(metadata) : station;
+      if (error != null) {
+        return station;
+      }
+      return station.withMetadata(retainLastKnownNowPlaying(station.metadata(), metadata));
     });
   }
 
@@ -356,10 +359,25 @@ public final class RadioRuntime implements AutoCloseable {
       if (error != null || metadata == null) {
         return;
       }
-      RadioStation updated = current.withMetadata(metadata);
+      RadioMetadata effectiveMetadata = retainLastKnownNowPlaying(current.metadata(), metadata);
+      RadioStation updated = current.withMetadata(effectiveMetadata);
       this.currentStation.set(updated);
       this.repository.updateFavoriteSnapshot(updated);
     });
+  }
+
+  static RadioMetadata retainLastKnownNowPlaying(
+      RadioMetadata current,
+      RadioMetadata update
+  ) {
+    RadioMetadata safeCurrent = current == null ? RadioMetadata.EMPTY : current;
+    if (update == null) {
+      return safeCurrent;
+    }
+    if (!update.hasNowPlaying() && safeCurrent.hasNowPlaying()) {
+      return safeCurrent;
+    }
+    return update;
   }
 
   @Override

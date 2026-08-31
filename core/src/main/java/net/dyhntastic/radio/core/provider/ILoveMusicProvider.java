@@ -104,8 +104,15 @@ public final class ILoveMusicProvider implements StationProvider {
   @Override
   public CompletableFuture<RadioMetadata> metadata(RadioStation station) {
     return cached("ilove:metadata:" + station.id(), Duration.ofSeconds(4), () ->
-        this.icy.fetch(station.streamUrl())
+        this.icy.fetch(station.streamUrl()).thenApply(ILoveMusicProvider::requireNowPlaying)
     );
+  }
+
+  static RadioMetadata requireNowPlaying(RadioMetadata metadata) {
+    if (metadata == null || !metadata.hasNowPlaying()) {
+      throw new IllegalStateException("I LOVE MUSIC returned no now-playing metadata");
+    }
+    return metadata;
   }
 
   private static RadioStation station(String id, String name, String stream, String genre) {

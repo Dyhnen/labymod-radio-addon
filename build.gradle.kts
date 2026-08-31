@@ -6,7 +6,7 @@ plugins {
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
 group = "net.dyhntastic.radio"
-version = providers.environmentVariable("VERSION").getOrElse("1.0.7")
+version = providers.environmentVariable("VERSION").getOrElse("1.0.8")
 
 labyMod {
     defaultPackageName = "net.dyhntastic.radio"
