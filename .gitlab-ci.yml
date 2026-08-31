@@ -1,0 +1,29 @@
+image: eclipse-temurin:25-jdk
+
+stages:
+  - build
+
+variables:
+  GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
+
+cache:
+  key: gradle
+  paths:
+    - .gradle/caches/
+    - .gradle/wrapper/
+
+build:
+  stage: build
+  script:
+    - chmod +x gradlew
+    - ./gradlew build --full-stacktrace --no-daemon
+    - ./gradlew createReleaseJar --no-daemon
+    - cp build/libs/dyhnunity-radio-player-release.jar dyhnunity-radio-player-release.jar
+  artifacts:
+    name: "dyhnunity-radio-player-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - dyhnunity-radio-player-release.jar
+    expire_in: 90 days
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
